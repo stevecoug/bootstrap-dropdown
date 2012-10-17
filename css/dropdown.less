@@ -1,0 +1,64 @@
+@smDropdownBackground: white;
+@smDropdownHoverBackground: #505050;
+@smDropdownBorder: #e0e0e0;
+@smDropdownText: black;
+@smDropdownHoverText: white;
+
+.sm-dropdown {
+	position: relative;
+	padding-top: 0px;
+	
+	.sm-dropdown-menu {
+		display: none;
+		background-color: @smDropdownBackground;
+		padding: 5px;
+		min-width: 200px;
+		margin: 0px;
+		border: 1px solid @smDropdownBorder;
+		margin-top: 0px;
+		z-index: 2000;
+		
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		
+		&:not(.pull-right) {
+			position: absolute;
+			top: 35px;
+			left: 0px;
+		}
+		&.pull-right {
+			position: absolute;
+			top: 35px;
+			right: 0px;
+		}
+		
+		li {
+			list-style-type: none;
+			margin: 0px;
+			padding: 0px;
+			position: relative;
+			
+			&.divider {
+				padding: 0px;
+				margin: 8px 0px;
+				border-top: 1px solid @smDropdownBorder;
+			}
+			
+			a {
+				text-decoration: none;
+				display: block;
+				margin: 0px;
+				padding: 3px 10px;
+				color: @smDropdownText;
+				white-space: nowrap;
+				
+				&:hover {
+					text-decoration: none;
+					background-color: @smDropdownHoverBackground;
+					color: @smDropdownHoverText;
+				}
+			}
+		}
+	}
+}
